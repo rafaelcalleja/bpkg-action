@@ -4,8 +4,6 @@ set -a #export declared variables
 
 . ${SHFLAGHS:-/usr/local/include/shflags}
 
-set -x
-
 DEFINE_string configfile '.bpkg.yml' "bpkg repository configuration file" c
 
 FLAGS "$@" || (echo "Failed parsing options." >&2; exit $?)
