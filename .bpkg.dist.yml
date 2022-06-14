@@ -1,0 +1,12 @@
+bpkg:
+  - package: package/name:v1.0.0
+    installPath: deps/
+    token: "${GH_TOKEN}"
+    package_json: |
+      {
+        "name": "package-name",
+        "version": "v1.0.0",
+        "manifest": "package.json",
+        "scripts": ["bin/file1"],
+        "files": ["src/file1"]
+      }
