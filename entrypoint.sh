@@ -31,6 +31,6 @@ for row in $(echo "${SYNCS}" | jq -r '.[] | @base64'); do
 
    ([ -z "${INSTALL_PATH}" ] || [ -z "${PACKAGE}" ] ) && { (echo "required values: installPath,package"); exit 0; }
 
-   rm -rf "${INSTALL_PATH:?}/$(basename ${PACKAGE}|sed  's/\:.*//g')"
+   go-bpkg uninstall --installPath "${INSTALL_PATH}" --package "${PACKAGE}"
    go-bpkg install --installPath "${INSTALL_PATH}" --package "${PACKAGE}" --token "${TOKEN}" --metadataJson "${PACKAGEJSON}"
 done
