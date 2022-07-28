@@ -1,4 +1,4 @@
-FROM rafaelcalleja/go-bpkg:0.0.8 as builder
+FROM rafaelcalleja/go-bpkg:0.0.9 as builder
 FROM ubuntu:20.04
 
 RUN apt update && \
