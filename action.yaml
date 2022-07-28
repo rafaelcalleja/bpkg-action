@@ -3,7 +3,7 @@ description: "Dependencies between repositories GitHub Actions"
 author: "rafaelcalleja"
 runs:
   using: "docker"
-  image: "docker://rafaelcalleja/bpkg-action:0.0.1"
+  image: "docker://rafaelcalleja/bpkg-action:0.0.2"
 branding:
   icon: "copy"
   color: "green"
